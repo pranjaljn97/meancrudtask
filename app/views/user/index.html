@@ -1,0 +1,24 @@
+<h2>Population Data</h2>
+ 
+<table class="table" ng-if="users.length>0">
+ <tr>
+ <th>Year</th>
+ <th>Population</th>
+ <th>Growth</th>
+ <th>Growth Rate</th>
+ <th>Actions</th>
+ </tr>
+ <tr ng-repeat="user in users">
+ <td>1</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td>
+ <a ui-sref="edit({id:user._id})">Edit</a> |
+ <a href="#" ng-click="deleteUser(user._id)">Delete</a>
+ </td>
+ </tr>
+</table>
+<div ng-if="users.length==0">
+ No record found !!
+</div>
